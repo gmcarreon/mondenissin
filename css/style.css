@@ -3,13 +3,15 @@
   margin: 0;
   padding: 0;
 }
-
+.logo-animation
+{
+    display:inline-block; 
+    margin:10% 25%;
+}
 .logo {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -70px;
-  margin-top: -70px;
+  position: relative;
+  margin-left: 50px;
+  margin-bottom: 120px;
   width: 150px;
   height: 150px;
   overflow: visible;
@@ -32,7 +34,7 @@
           animation: square-anim 9s 1s infinite;
 }
 .logo__line {
-  stroke: #9E9E9E;
+  stroke: black;
   stroke-dasharray: 260, 260;
   stroke-dashoffset: 260;
 }
@@ -88,30 +90,30 @@
   stroke: #ec1f32;
   stroke-dasharray: 200, 200;
   stroke-dashoffset: 600;
-  -webkit-animation: strokeAnim 9s 1s ease-in-out infinite;
-          animation: strokeAnim 9s 1s ease-in-out infinite;
+  -webkit-animation: strokeAnim 8s 1s ease-in-out infinite;
+          animation: strokeAnim 8s 1s ease-in-out infinite;
 }
 .logo__strokemid {
   stroke: #f58220;
   stroke-dasharray: 200, 200;
   stroke-dashoffset: 600;
-  -webkit-animation: strokeAnim 9s 1s ease-in-out infinite;
-          animation: strokeAnim 9s 1s ease-in-out infinite;
+  -webkit-animation: strokeAnim 8s 1s ease-in-out infinite;
+          animation: strokeAnim 8s 1s ease-in-out infinite;
 }
 .logo__fill {
   stroke: #ec1f32;
   stroke-dasharray: 290, 290;
   stroke-dashoffset: 290;
-  -webkit-animation: fillAnim 9s 1s infinite;
-          animation: fillAnim 9s 1s infinite;
+  -webkit-animation: fillAnim 8s 1s infinite;
+          animation: fillAnim 8s 1s infinite;
 }
 
 .logo__fillmid {
   stroke: #f58220;
   stroke-dasharray: 290, 290;
   stroke-dashoffset: 290;
-  -webkit-animation: fillAnim 9s 1s infinite;
-          animation: fillAnim 9s 1s infinite;
+  -webkit-animation: fillAnim 8s 1s infinite;
+          animation: fillAnim 8s 1s infinite;
 }
 @-webkit-keyframes square-anim {
   12% {
@@ -280,4 +282,10 @@
 .other__link {
   font-size: 1.3rem;
   margin: 0 1rem;
+}
+.typewriter
+{
+    font-size:60px;
+    font-weight:bold;
+    font-family:helvetica;
 }

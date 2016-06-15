@@ -1,0 +1,11 @@
+body {
+  background: #eee;
+}
+.filler {
+  background: #20B7AF;
+  position: absolute;
+  bottom: 50%;
+  top: 0;
+  left: 0;
+  right: 0;
+}

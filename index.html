@@ -1,79 +1,61 @@
 <html>
 <head>
 	<link href="css/style.css" rel="stylesheet" />
+    <link href="css/clock.css" rel="Stylesheet" />
 </head>
 <body>
+<div>
+    <svg width="200" height="200">
+        <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+            <feOffset in="blur" dx="2.5" dy="2.5"/>
+        </filter>
+
+        <g>
+            <circle id="shadow" style="fill:rgba(0,0,0,0.1)" cx="97" cy="100" r="87" filter="url(#innerShadow)"></circle>
+            <circle id="circle" style="stroke: #FFF; stroke-width: 12px; fill:#20B7AF" cx="100" cy="100" r="80"></circle>
+        </g>
+        <g>
+            <line x1="100" y1="100" x2="100" y2="55" transform="rotate(80 100 100)" style="stroke-width: 3px; stroke: #fffbf9;" id="hourhand">
+                <animatetransform attributeName="transform"
+                                  attributeType="XML"
+                                  type="rotate"
+                                  dur="43200s"
+                                  repeatCount="indefinite"/>
+            </line>
+            <line x1="100" y1="100" x2="100" y2="40" style="stroke-width: 4px; stroke: #fdfdfd;" id="minutehand">
+                <animatetransform attributeName="transform"
+                                  attributeType="XML"
+                                  type="rotate"
+                                  dur="3600s"
+                                  repeatCount="indefinite"/>
+            </line>
+            <line x1="100" y1="100" x2="100" y2="30" style="stroke-width: 2px; stroke: #C1EFED;" id="secondhand">
+                <animatetransform attributeName="transform"
+                                  attributeType="XML"
+                                  type="rotate"
+                                  dur="60s"
+                                  repeatCount="indefinite"/>
+            </line>
+        </g>
+        <circle id="center" style="fill:#128A86; stroke: #C1EFED; stroke-width: 2px;" cx="100" cy="100" r="3"></circle>
+    </svg>  
+</div>
 <div class="logo-animation">
     <svg class="logo" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 70 70" version="1.1">
         <g class="logo__colorGroup" id="yad">
-          <path class="logo__stroke" fill="none" stroke-width="1" d="M0,0 Q70,10 20,100" />
-          <path class="logo__stroke" fill="none" stroke-width="1" d="M0,0 Q105,0 20,100" />
-          <path class="logo__strokemid" fill="none" stroke-width="1" d="M40,3 Q105,10 41,125" />
-          <path class="logo__strokemid" fill="none" stroke-width="1" d="M40,3 Q140,0 41,125" />
-          <path class="logo__stroke" fill="none" stroke-width="1" d="M70,3 Q140,10 90,100" />
-          <path class="logo__stroke" fill="none" stroke-width="1" d="M70,3 Q175,0 90,100" />
+          <path class="logo__stroke" fill="none" stroke-linecap="round" stroke-width="1" d="M0,0 Q70,10 20,100" />
+          <path class="logo__stroke" fill="none" stroke-linecap="round" stroke-width="1" d="M0,0 Q105,0 20,100" />
+          <path class="logo__strokemid" fill="none" stroke-linecap="round" stroke-width="1" d="M40,3 Q105,10 41,125" />
+          <path class="logo__strokemid" fill="none" stroke-linecap="round" stroke-width="1" d="M40,3 Q140,0 41,125" />
+          <path class="logo__stroke" fill="none" stroke-linecap="round" stroke-width="1" d="M70,3 Q140,10 90,100" />
+          <path class="logo__stroke" fill="none" stroke-linecap="round" stroke-width="1" d="M70,3 Q175,0 90,100" />
         </g>
     </svg>
     <p class="typewriter"></p>
 </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function () {
-            var mond = "Monde Nissin";
-            var text = mond;
-            var length = text.length;
-            var timeOut;
-            var character = 0;
-
-            (function typeWriter() {
-                timeOut = setTimeout(function () {
-                    var type = text.substring(0, character);
-                    $('.typewriter').text(type);
-                    character++;
-                    typeWriter();
-
-                    if (character > length) {
-                    	clearTimeout(timeOut);
-                    }
-                }, 200);
-            } ());
-
-            var svg = document.getElementById("yad");
-            var z = 10;
-
-            for (var x = 0; x < 35; x++) {
-                var q1 = x + 71;
-                var q2 = x + 140;
-                var q3 = x + 105;
-                var newAtt1 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
-                var newAtt2 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
-                var newAtt3 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
-
-                if (x > 20 && z > 0) {
-                    newAtt1.setAttribute("d", "M0,0 Q" + q1 + "," + z + " 20,100");
-                    newAtt2.setAttribute("d", "M70,3 Q" + q2 + "," + z + " 90,100");
-                    newAtt3.setAttribute("d", "M40,3 Q" + q3 + "," + z + " 41,125");
-                    z--;
-                }
-                else {
-                    newAtt1.setAttribute("d", "M0,0 Q" + q1 + "," + z + " 20,100");
-                    newAtt2.setAttribute("d", "M70,3 Q" + q2 + "," + z + " 90,100");
-                    newAtt3.setAttribute("d", "M40,3 Q" + q3 + "," + z + " 41,125");
-                }
-                newAtt1.setAttribute("class", "logo__fill");
-                newAtt1.style.strokeWidth = "1";
-                newAtt1.style.fill = "none";
-                newAtt2.setAttribute("class", "logo__fill");
-                newAtt2.style.strokeWidth = "1";
-                newAtt2.style.fill = "none";
-                newAtt3.setAttribute("class", "logo__fillmid");
-                newAtt3.style.strokeWidth = "1";
-                newAtt3.style.fill = "none";
-                svg.appendChild(newAtt1);
-                svg.appendChild(newAtt2);
-                svg.appendChild(newAtt3);
-            }
-        });
-    </script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/clock.js"></script>
 </body>
 </html>

@@ -20,15 +20,19 @@
   stroke: #ed1c2f;
   stroke-dasharray: 200, 200;
   stroke-dashoffset: 600;
-  -webkit-animation: strokeAnim 8s 1s ease-in-out infinite;
-          animation: strokeAnim 8s 1s ease-in-out infinite;
+  -webkit-animation: strokeAnim 8s 1s infinite;
+          animation: strokeAnim 8s 1s infinite;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
 }
 .logo__strokemid {
   stroke: #f68121;
   stroke-dasharray: 200, 200;
   stroke-dashoffset: 600;
-  -webkit-animation: strokeAnim 8s 1s ease-in-out infinite;
-          animation: strokeAnim 8s 1s ease-in-out infinite;
+  -webkit-animation: strokeAnim 8s 1s infinite;
+          animation: strokeAnim 8s 1s infinite;
+          animation-iteration-count: 1;
+          animation-fill-mode: forwards;
 }
 .logo__fill {
   stroke: #ed1c2f;

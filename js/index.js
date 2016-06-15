@@ -67,13 +67,13 @@ $(document).ready(function () {
             newAtt3.setAttribute("d", "M34,2 Q" + q3 + "," + z + " 41,125");
         }
         newAtt1.setAttribute("class", "logo__fill");
-        newAtt1.style.strokeWidth = "1";
+        newAtt1.style.strokeWidth = ".8";
         newAtt1.style.fill = "none";
         newAtt2.setAttribute("class", "logo__fill");
-        newAtt2.style.strokeWidth = "1";
+        newAtt2.style.strokeWidth = ".8";
         newAtt2.style.fill = "none";
         newAtt3.setAttribute("class", "logo__fillmid");
-        newAtt3.style.strokeWidth = "1";
+        newAtt3.style.strokeWidth = ".8";
         newAtt3.style.fill = "none";
         svg.appendChild(newAtt1);
         svg.appendChild(newAtt2);

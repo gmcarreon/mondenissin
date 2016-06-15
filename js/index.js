@@ -23,23 +23,23 @@ $(document).ready(function () {
     } ());
 
     setTimeout(function () {
-        
+
         $('.typewriterTM').text(TM);
         textTM.fadeIn();
         //textTM.fadeIn("slow");
         //textTM.fadeIn(10000);
         /*var char = 0;
         (function typeWriterTM() {
-            timeOutTM = setTimeout(function () {
-                var type = text2.substring(0, char);
-                $('.typewriterTM').text(type);
-                char++;
-                typeWriterTM();
+        timeOutTM = setTimeout(function () {
+        var type = text2.substring(0, char);
+        $('.typewriterTM').text(type);
+        char++;
+        typeWriterTM();
 
-                if (char > length2) {
-                    clearTimeout(timeOutTM);
-                }
-            }, 200);
+        if (char > length2) {
+        clearTimeout(timeOutTM);
+        }
+        }, 200);
         } ());*/
     }, 7300);
 
@@ -49,7 +49,7 @@ $(document).ready(function () {
 
     for (var x = 0; x < 35; x++) {
         var q1 = x + 71;
-        var q2 = x + 141;
+        var q2 = x + 126;
         var q3 = x + 106;
         var newAtt1 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
         var newAtt2 = document.createElementNS("http://www.w3.org/2000/svg", 'path');
@@ -66,14 +66,21 @@ $(document).ready(function () {
             newAtt2.setAttribute("d", "M67,4 Q" + q2 + "," + z + " 90,100");
             newAtt3.setAttribute("d", "M34,2 Q" + q3 + "," + z + " 41,125");
         }
+
+        if (x == 0  || x >= 33) {
+            newAtt1.style.strokeWidth = ".5";
+            newAtt2.style.strokeWidth = ".5";
+            newAtt3.style.strokeWidth = ".5";
+        } else {
+            newAtt1.style.strokeWidth = "1";
+            newAtt2.style.strokeWidth = "1";
+            newAtt3.style.strokeWidth = "1";
+        }
         newAtt1.setAttribute("class", "logo__fill");
-        newAtt1.style.strokeWidth = ".8";
         newAtt1.style.fill = "none";
         newAtt2.setAttribute("class", "logo__fill");
-        newAtt2.style.strokeWidth = ".8";
         newAtt2.style.fill = "none";
         newAtt3.setAttribute("class", "logo__fillmid");
-        newAtt3.style.strokeWidth = ".8";
         newAtt3.style.fill = "none";
         svg.appendChild(newAtt1);
         svg.appendChild(newAtt2);

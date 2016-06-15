@@ -23,7 +23,12 @@ $(document).ready(function () {
     } ());
 
     setTimeout(function () {
-        var char = 0;
+        
+        $('.typewriterTM').text(TM);
+        textTM.fadeIn();
+        //textTM.fadeIn("slow");
+        //textTM.fadeIn(10000);
+        /*var char = 0;
         (function typeWriterTM() {
             timeOutTM = setTimeout(function () {
                 var type = text2.substring(0, char);
@@ -35,7 +40,7 @@ $(document).ready(function () {
                     clearTimeout(timeOutTM);
                 }
             }, 200);
-        } ());
+        } ());*/
     }, 7300);
 
 

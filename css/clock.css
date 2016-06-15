@@ -1,5 +1,6 @@
 body {
   background: #eee;
+  animation: rotatePage 5s 1s infinite
 }
 .filler {
   background: #20B7AF;
@@ -8,4 +9,17 @@ body {
   top: 0;
   left: 0;
   right: 0;
+}
+
+@keyframes rotatePage
+{
+  33% {
+    transform: rotateZ(360deg);
+  }
+  66% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }    
 }

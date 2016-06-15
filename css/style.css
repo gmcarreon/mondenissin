@@ -10,32 +10,28 @@
 }
 .logo {
   position: relative;
-  margin-left: 50px;
-  margin-bottom: 120px;
-  width: 150px;
-  height: 150px;
+  margin-left: 75px;
+  margin-bottom: 75px;
+  width: 100px;
+  height: 100px;
   overflow: visible;
 }
 .logo__stroke {
-  stroke: #ec1f32;
+  stroke: #ed1c2f;
   stroke-dasharray: 200, 200;
   stroke-dashoffset: 600;
   -webkit-animation: strokeAnim 8s 1s ease-in-out infinite;
           animation: strokeAnim 8s 1s ease-in-out infinite;
-          animation-iteration-count: 1;
-          animation-fill-mode: forwards;
 }
 .logo__strokemid {
-  stroke: #f58220;
+  stroke: #f68121;
   stroke-dasharray: 200, 200;
   stroke-dashoffset: 600;
   -webkit-animation: strokeAnim 8s 1s ease-in-out infinite;
           animation: strokeAnim 8s 1s ease-in-out infinite;
-          animation-iteration-count: 1;
-          animation-fill-mode: forwards;
 }
 .logo__fill {
-  stroke: #ec1f32;
+  stroke: #ed1c2f;
   stroke-dasharray: 290, 290;
   stroke-dashoffset: 290;
   -webkit-animation: fillAnim 8s 1s infinite;
@@ -45,7 +41,7 @@
 }
 
 .logo__fillmid {
-  stroke: #f58220;
+  stroke: #f68121;
   stroke-dasharray: 290, 290;
   stroke-dashoffset: 290;
   -webkit-animation: fillAnim 8s 1s infinite;
@@ -110,6 +106,15 @@
 }
 .typewriter
 {
-    font-size:60px;
+    font-size:55px;
+    font-family:TAHOMA;
+}
+.typewriterTM
+{
+    position:relative;
+    font-size:11px;
+    top:-127px;
+    left:230px;
+    display:block;
     font-family:TAHOMA;
 }
